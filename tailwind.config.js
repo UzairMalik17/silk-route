@@ -12,7 +12,8 @@ module.exports = {
       },
       colors: {
         delayedYellow: "#FCFE00",
-        springGreen: " #39FF14",
+        springGreen: "#39FF14",
+        electricPurple: "#5501EE",
       },
     },
   },
