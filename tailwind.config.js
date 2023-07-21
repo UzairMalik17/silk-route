@@ -10,6 +10,10 @@ module.exports = {
         sansNarrow: ["PT Sans Narrow", "sans-serif"],
         anton: ["Anton", "sans-serif"],
       },
+      colors: {
+        delayedYellow: "#FCFE00",
+        springGreen: " #39FF14",
+      },
     },
   },
   plugins: [],

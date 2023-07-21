@@ -4,7 +4,7 @@ import Riga from "./images/Riga.png";
 import Slider from "./images/Slider.png";
 function Hero() {
   return (
-    <section className="bg-heroImage bg-cover bg-center bg-no-repeat w-full h-[calc(100vh+6rem)]">
+    <div className="bg-heroImage bg-center bg-no-repeat w-full h-[calc(100vh+6rem)]">
       <h1 className="font-anton text-white leading-[7.5rem] text-[5rem] absolute top-[13rem] left-[8.4375rem]">
         Immigration
         <br />
@@ -23,8 +23,8 @@ function Hero() {
       <img
         src={Slider}
         alt="Slider"
-        className="w-[68.875rem] h-[2.0625rem] absolute top-[42.934375rem] left-[10.6275rem]"></img>
-    </section>
+        className="w-[68.875rem] h-[2.0625rem] pb-2 absolute top-[42.934375rem] left-[10.6275rem]"></img>
+    </div>
   );
 }
 
