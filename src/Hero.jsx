@@ -4,7 +4,7 @@ import Riga from "./images/Riga.png";
 import Slider from "./images/Slider.png";
 function Hero() {
   return (
-    <div className="bg-heroImage bg-center bg-no-repeat w-full h-[calc(100vh+6rem)]">
+    <div className="bg-heroImage bg-center bg-no-repeat bg-cover w-full h-[calc(100vh+6rem)]">
       <h1 className="font-anton text-white leading-[7.5rem] text-[5rem] absolute top-[13rem] left-[8.4375rem]">
         Immigration
         <br />
