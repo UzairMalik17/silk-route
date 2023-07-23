@@ -1,55 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./images/LOGO.png";
 import { RxDropdownMenu } from "react-icons/rx";
+import ComponentWrapper from "./components/Shared/Wrappers/ComponentWrapper";
 
-function Navbar(props) {
-  const toggle = props.toggle;
+function Navbar() {
+  const [toggle, setToggle] = useState(false);
+  const menu = [
+    { name: "Home", route: "/" },
+    { name: "About Us", route: "/" },
+    { name: "Services", route: "/" },
+    { name: "Blog", route: "/" },
+    { name: "FAQ", route: "/" },
+    { name: "Contact", route: "/" },
+  ];
+  const toggleHandler = () => {
+    setToggle((prevState) => !prevState);
+  };
   return (
-    <nav>
-      <div className="bg-transparent flex fixed w-full">
-        <div className="pt-2 pl-[2rem] md:pl-24 pb-1.5">
-          <img src={logo} alt="Logo" className="h-[82px] w-[196.81px]" />
+    <ComponentWrapper style={`relative bg-[#0D0D0D]`}>
+      <div className="bg-transparent flex items-center justify-between w-full h-[90px] px-8">
+        <div>
+          <img src={logo} alt="Logo" className="h-[80px] w-[196.81px]" />
         </div>
-        <div className="hidden text-white md:pl[15rem] lg:pl-[18rem] xl:pl-[22.25rem] md:pr-24 h-[5.8125rem] w-[calc(100vw-12.3rem)] md:flex items-center justify-between font-sansNarrow">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Services</a>
-          <a href="#">Blogs</a>
-          <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+        <div className="hidden md:flex items-center justify-start gap-8">
+          {menu.map((item, index) => {
+            return (
+              <a className="text-white text-base " href={item.route}>
+                {item.name}
+              </a>
+            );
+          })}
         </div>
-        <button className="md:hidden absolute right-[2rem] pt-[1.5rem]">
-          {" "}
-          <RxDropdownMenu
-            size={60}
-            color={toggle === true ? "yellow" : "white"}
-            onClick={props.navbarToggle}
-          />
-        </button>
+
+        <RxDropdownMenu
+          className={`h-[40px] w-[40px] md:hidden inline-block text-white ${
+            toggle && "text-yellow-500"
+          }`}
+          onClick={toggleHandler}
+        />
       </div>
       {toggle && (
-        <div className="bg-[#0D0D0D] block text-white md:hidden pt-[7rem] w-full text-center place-items-center mx-auto justify-between">
-          <a className="block pb-4" href="#">
-            Home
-          </a>
-          <a className="block pb-4" href="#">
-            About Us
-          </a>
-          <a className="block pb-4" href="#">
-            Services
-          </a>
-          <a className="block pb-4" href="#">
-            Blogs
-          </a>
-          <a className="block pb-4" href="#">
-            FAQ
-          </a>
-          <a className="block pb-4" href="#">
-            Contact
-          </a>
+        <div className=" absolute h-[100vh] w-[100vw] flex flex-col items-center bg-[#0D0D0D] top-0 gap-8 p-4 z-10">
+          {menu.map((item, index) => {
+            return (
+              <a className="text-white text-base" href={item.route}>
+                {item.name}
+              </a>
+            );
+          })}
+          <button className="text-red-500" onClick={toggleHandler}>
+            close
+          </button>
         </div>
       )}
-    </nav>
+    </ComponentWrapper>
   );
 }
 export default Navbar;

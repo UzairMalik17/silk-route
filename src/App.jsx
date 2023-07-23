@@ -7,13 +7,9 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 function App() {
-  const [toggle, setToggle] = useState(false);
-  function toggleHandler() {
-    toggle === true ? setToggle(false) : setToggle(true);
-  }
   return (
     <div>
-      <Navbar navbarToggle={toggleHandler} toggle={toggle} />
+      <Navbar />
       <Hero />
       <Body />
       <Bio />
