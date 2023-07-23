@@ -18,7 +18,7 @@ function Navbar() {
   };
   return (
     <ComponentWrapper style={`relative bg-[#0D0D0D]`}>
-      <div className="bg-transparent flex items-center justify-between w-full h-[90px] px-8">
+      <div className="bg-transparent flex items-center justify-between w-full h-[90px]">
         <div>
           <img src={logo} alt="Logo" className="h-[80px] w-[196.81px]" />
         </div>

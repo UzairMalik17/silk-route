@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="bg-heroImage bg-center bg-no-repeat bg-cover h-[calc(100vh-90px)]">
       <ComponentWrapper>
-        <h1 className="font-anton text-[3rem] text-white leading-[7.5rem] p-16 md:text-[5rem]">
+        <h1 className="font-anton text-[3.5rem] text-center sm:text-left text-white leading-[7.5rem] pt-16 md:text-[4.5rem]">
           Immigration
           <br />
           Tailored
