@@ -40,7 +40,7 @@ function Navbar() {
         />
       </div>
       {toggle && (
-        <div className="absolute h-[100vh] flex flex-col items-center bg-[#0D0D0D] top-0 gap-8 p-4 z-10">
+        <div className="absolute h-[100vh] w-28 sidebar flex flex-col items-center bg-[#0D0D0D] top-0 gap-8 p-4 z-10">
           {menu.map((item, index) => {
             return (
               <a className="text-white text-base" href={item.route}>

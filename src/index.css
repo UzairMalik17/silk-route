@@ -18,3 +18,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.sidebar {
+  animation: movein 200ms ease-in;
+}
+@keyframes movein {
+  0% {
+    margin-left: -112px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
